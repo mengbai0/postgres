@@ -1,0 +1,16 @@
+version: "3"
+services:
+  postgres:
+    image: pgsql-test:latest
+    container_name: pgsql
+    network_mode: bridge
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+      - POSTGRES_PASSWORD=waf123456
+    volumes:
+      - E:\pgsql\data:/var/lib/postgresql/data
+    ports:
+      - 15432:5432
+
+    
